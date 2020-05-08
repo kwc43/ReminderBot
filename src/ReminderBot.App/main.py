@@ -17,7 +17,7 @@ def get_prefix(bot, message):
     
     return commands.when_mentioned_or(*prefixes)(bot, message)
 
-extensions = ['cogs.general']
+extensions = ['cogs.general', 'cogs.admin', 'cogs.rng']
 bot = commands.Bot(command_prefix = get_prefix, description='Reminder Bot')
 
 if __name__ == '__main__':
@@ -38,4 +38,4 @@ async def on_command_error(ctx, error):
     else:
         await ctx.send(error)
 
-bot.run(TOKEN, bot = True, reconnect = True)
+bot.run(TOKEN, bot = True)

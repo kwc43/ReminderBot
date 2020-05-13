@@ -31,6 +31,7 @@ async def on_ready():
     await bot.change_presence(activity=discord.Activity(name='Running', type=1))
     print(f'Logged in and booted!')
 
+#ONLY FOR DEBUGGING
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.errors.CheckFailure):

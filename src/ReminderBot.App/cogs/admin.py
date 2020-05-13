@@ -18,7 +18,7 @@ class AdminCog(commands.Cog):
     @commands.command(name='shout', aliases=['message_all', 'ma', ], help='Message all users under a given role')
     @commands.guild_only()
     @commands.has_role('admin')
-    async def ma(self, ctx, msg, role='@everyone'):
+    async def shout(self, ctx, msg, role='@everyone'):
         users_messaged = []
 
         for m in ctx.guild.members :
